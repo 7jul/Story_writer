@@ -198,7 +198,7 @@ class PoemStoryGenerator(QMainWindow):
 
     def _get_api_key(self):
         """从 api.key 文件中读取 API 密钥"""
-        api_key_file = "api.key"
+        api_key_file = os.path.join(os.path.dirname(__file__),"api.key")
         if not os.path.exists(api_key_file):
             return None
 
